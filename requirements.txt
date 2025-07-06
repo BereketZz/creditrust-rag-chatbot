@@ -1,0 +1,30 @@
+# requirements.txt
+
+# Core Data
+pandas
+numpy
+
+# Visualization
+matplotlib
+seaborn
+
+# Text Preprocessing
+nltk
+scikit-learn
+
+# Vector DB for semantic search
+faiss-cpu  # Or faiss-gpu if using GPU
+sentence-transformers
+
+# LLM interface (OpenAI or similar)
+openai  # Or use Hugging Face Transformers if you prefer
+langchain  # For managing RAG pipeline
+
+# Notebook environment (if needed)
+jupyter
+
+# (Optional) Basic Web UI
+streamlit
+
+# (Optional) Chroma DB (alternative to FAISS)
+chromadb
