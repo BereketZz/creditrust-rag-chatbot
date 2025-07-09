@@ -4,6 +4,8 @@ venv/
 # Ignore all data files
 data/
 
+vector_store/
+
 
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
