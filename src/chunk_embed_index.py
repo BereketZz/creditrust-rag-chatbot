@@ -100,6 +100,15 @@ faiss.write_index(index, INDEX_FILE)
 
 with open(META_FILE, "wb") as f:
     pickle.dump(metadata_list, f)
-
+  
 print(f"FAISS index saved to {INDEX_FILE}")
 print(f"Metadata saved to {META_FILE}")
+
+# ------------------------
+# Optional Step: Save all_chunks for Task 3
+# ------------------------
+CHUNKS_FILE = os.path.join(VECTOR_STORE_DIR, "chunks.pkl")
+with open(CHUNKS_FILE, "wb") as f:
+    pickle.dump(all_chunks, f)
+
+print(f"Chunks saved to {CHUNKS_FILE}")
