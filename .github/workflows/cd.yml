@@ -1,0 +1,20 @@
+name: Deploy to HuggingFace
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Push to HuggingFace
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git lfs install
+          git remote add space https://user:${HF_TOKEN}@huggingface.co/spaces/<your-username>/<space-name>
+          git push space main --force
